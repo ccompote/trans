@@ -27,9 +27,9 @@ services:
   db:
     image: postgres:13
     environment:
-      - POSTGRES_DB=djangotrans_db
-      - POSTGRES_USER=lh_db
-      - POSTGRES_PASSWORD=lhpwdb
+      - DB_NAME=${POSTGRES_DB}
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
